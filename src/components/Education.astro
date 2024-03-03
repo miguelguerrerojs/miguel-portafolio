@@ -1,0 +1,59 @@
+---
+import Pencil from "../icons/Pencil.astro";
+const EDUCATION = [
+    {
+        title: "Bachelor's degree",
+        goal: "Computer Science - Universidad Nueva Esparta",
+    },
+    {
+        title: "Highschool Degree",
+        goal: "Science Mention - U.E “El Niño Don Simón”",
+    },
+    {
+        title: "EF SET Certificate",
+        goal: "EF Standard English Test - C2 Proficient",
+    },
+    {
+        title: "LinkedIn Certificate",
+        goal: "Carreer Skills - Software Development",
+    },
+    {
+        title: "LinkedIn Certificate",
+        goal: "Programming Foundations - Fundamentals",
+    },
+    {
+        title: "LinkedIn Certificate",
+        goal: "Git & Github - Essential Training",
+    },
+];
+---
+
+<div class="w-full max-w-md p-4 sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex items-center">
+        <Pencil class="size-7" />
+        <h5 class="pl-2 text-3xl">Education</h5>
+    </div>
+    {
+        EDUCATION.map((education) => (
+            <div class="flow-root">
+                <ul
+                    role="list"
+                    class="divide-y divide-gray-200 dark:divide-gray-700">
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center">
+                            <div class="flex-1 min-w-0 ms-4">
+                                <p class="text-lg text-blue-200/90 truncate">
+                                    {education.title}
+                                </p>
+                                <p class="text-white/85 truncate dark:text-gray-400">
+                                    {education.goal}
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li />
+                </ul>
+            </div>
+        ))
+    }
+</div>
